@@ -1,33 +1,53 @@
-import { render } from "@testing-library/react"
-import { Component } from "react"
-import React from 'react'
+<!doctype html>
+<html lang="en">
 
-class Home extends React.Component{
-    render(){
-        return (
- <div>
-                 <nav id="mainNavbar" class="navbar navbar-dark  navbar-expand-lg py-0 fixed-top text-primary" >
-        <a href="#" class="navbar-brand"><img src="homepage/public/img/apna player.png" width="50px" alt=""/></a>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Apna-Player</title>
+
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" type="text/css" href="..\public\css\home.css">
+
+</head>
+
+<body>
+
+    <nav id="mainNavbar" class="navbar navbar-dark  navbar-expand-lg py-0 fixed-top text-primary" >
+        <a href="#" class="navbar-brand"><img src="../public/img/apna player.png" width="50px" alt=""></a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon " ></span>
         </button>
         <div class="collapse navbar-collapse " id="navLinks">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a href="" class="nav-link" ><i class="fas fa-home mx-2" > </i>HOME </a>
+                    <a href="" class="nav-link"><i class="fas fa-home mx-2"></i>HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link"><i class="fa fa-group mx-2"> </i>ABOUT</a>
+                    <a href="" class="nav-link"><i class="fa fa-group mx-2"></i>ABOUT</a>
                 </li>
            </ul>
             <ul class="navbar-nav d-flex ">
                 <li class="nav-item">
                     <a href="#" class="nav-link">SIGN IN</a>
                 </li>
-                <hr/>
+                <hr>
                 <li class="nav-item">
-                <a href="#" class="nav-link">SIGN UP </a>
-                </li>
+                
+                <a href="#" class="nav-link">SIGN UP</a>
+            </li>
             </ul>
         </div>
     </nav>
@@ -42,19 +62,19 @@ class Home extends React.Component{
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100  img-fluid tales" src="homepage/public/img/mic music.jpg" alt="First slide"/>
+                    <img class="d-block w-100  img-fluid tales" src="../public/img/mic music.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100 img-fluid tales" src="homepage/public/img/bruce-mars-DBGwy7s3QY0-unsplash.jpg"
-                        alt="Second slide"/>
+                    <img class="d-block w-100 img-fluid tales" src="../public/img/bruce-mars-DBGwy7s3QY0-unsplash.jpg"
+                        alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100 img-fluid tales" src="homepage/public/img/elice-moore-E--AUpYXbjM-unsplash.jpg"
-                        alt="Third slide"/>
+                    <img class="d-block w-100 img-fluid tales" src="../public/img/elice-moore-E--AUpYXbjM-unsplash.jpg"
+                        alt="Third slide">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100 img-fluid tales"
-                        src="homepage/public/img/bruno-emmanuelle-Gi6-m_t_W-E-unsplash.jpg" alt="Fouth slide"/>
+                        src="../public/img/bruno-emmanuelle-Gi6-m_t_W-E-unsplash.jpg" alt="Fouth slide">
                 </div>
 
             </div>
@@ -82,7 +102,7 @@ class Home extends React.Component{
                 </div>
             </div>
             <div class="col-lg-6 m-0">
-                <img class="img-fluid d-none d-sm-block " src="homepage/public/img/gettyimages-951326930-1579515324.jpg" alt=""/>
+                <img class="img-fluid d-none d-sm-block " src="../public/img/gettyimages-951326930-1579515324.jpg" alt="">
             </div>
         </div>
     </section>
@@ -90,13 +110,13 @@ class Home extends React.Component{
     <section class="container-fluid px-0">
         <div class="row align-items-center content">
             <div class="col-md-6 order-2 order-md-1">
-                <img src="homepage/public/img/FreeVector-Love.jpg" alt="" class="img-fluid "/>
+                <img src="../public/img/FreeVector-Love.jpg" alt="" class="img-fluid ">
             </div>
             <div class="col-md-6 text-center order-1 order-md-2">
                 <div class="row justify-content-center">
                     <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
                         <h2>ROMANTIC SONG</h2>
-                        <img src="../public/img/romantic ic.png" alt="" class="d-none d-xs-inline d-lg-inline "/>
+                        <img src="../public/img/romantic ic.png" alt="" class="d-none d-xs-inline d-lg-inline ">
                         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
                             beatae, maiores deserunt
                             in voluptatibus
@@ -114,7 +134,7 @@ class Home extends React.Component{
                 <div class="row justify-content-center">
                     <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
                         <h2>RETRO SONG</h2>
-                        <img src="homepage/public/img/retro ic.png" alt="" class="d-none d-lg-inline"/>
+                        <img src="../public/img/retro ic.png" alt="" class="d-none d-lg-inline">
                         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
                             beatae, maiores deserunt
                             in voluptatibus
@@ -127,18 +147,18 @@ class Home extends React.Component{
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="homepage/public/img/retro.jpg" alt="" class="img-fluid"/>
+                <img src="../public/img/retro.jpg" alt="" class="img-fluid">
             </div>
         </div>
         <div class="row align-items-center content">
             <div class="col-md-6 order-2 order-md-1">
-                <img src="homepage/public/img/romantic.jpg" alt="" class="img-fluid"/>
+                <img src="../public/img/romantic.jpg" alt="" class="img-fluid">
             </div>
             <div class="col-md-6 text-center order-1 order-md-2">
                 <div class="row justify-content-center">
                     <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
                         <h2>ROCK MUSIC</h2>
-                        <img src="homepage/public/img/rockmusic.png" alt="" class="d-none d-lg-inline"/>
+                        <img src="../public/img/rockmusic.png" alt="" class="d-none d-lg-inline">
                         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
                             beatae, maiores
                             deserunt
@@ -157,7 +177,7 @@ class Home extends React.Component{
     </section>
 
     <footer class="footer ">
-        <p class="footer__title"> <img src="homepage/public/img/music ic.png" class="img-fluid" width="50" height="50" alt=""/>
+        <p class="footer__title"> <img src="../public/img/music ic.png" class="img-fluid" width="50" height="50" alt="">
             Apna-Player</p>
 
         <div class="footer__admin">
@@ -171,7 +191,7 @@ class Home extends React.Component{
         <p>&#169; 2020 copyright all right reserved</p>
     </footer>
 
-{/*    
+   
 
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 
@@ -192,10 +212,8 @@ class Home extends React.Component{
                 $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
             });
         });
-    </script> */}
-               
-            </div>
-        )
-    }
-}
-export default Home
+    </script>
+
+</body>
+
+</html>

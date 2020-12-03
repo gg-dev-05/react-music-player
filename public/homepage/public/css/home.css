@@ -1,0 +1,121 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/*=====  CSS =====*/
+body {
+    background: #f5d9d5;
+    font-family: "Poppins","Nunito", sans-serif;
+}
+
+.blurb h2 {
+   color: #EA1C2C;
+   font-weight: 100;
+   font-size: 2.5rem;
+}
+
+.blurb p {
+    color: #f498b8;
+    font-weight: 100;
+    font-size: 1.125rem;
+    line-height: 2;
+}
+
+.content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 100;    
+}
+
+
+#mainNavbar .nav-link {
+  color: rgb(255, 255, 255);
+}
+
+#mainNavbar .nav-link:hover {
+    color: #18c5ae;
+}
+
+#mainNavbar .navbar-brand {
+    color: #EA1C2C;
+    font-size: 1.5rem;
+}
+
+#headingGroup span {
+    color: #EA1C2C;
+}
+
+#headingGroup h1 {
+    font-weight: 100;
+    font-size: 4rem;
+}
+
+.navbar.scrolled {
+    background: rgb(49, 40, 102);
+    transition: background 500ms;
+}
+
+
+@media (max-width: 1200px) {
+    #headingGroup h1 {
+        font-weight: 100;
+        font-size: 3rem;
+    }
+    .blurb h2 {
+        font-size: 2rem;
+    }
+}
+@media (min-width: 1200px) {
+    #headingGroup h1 {
+        font-weight: 100;
+        font-size: 3rem;
+    }
+    .blurb h2 {
+        font-size: 2rem;
+    }
+    .tales {
+     height: 100vh;
+    }
+}
+
+/* //////////////////// */
+/*
+.carousel-inner{
+  width:100%;
+  max-height: 200px !important;
+} */
+
+
+/* ===== FOOTER =====*/
+.footer{
+    background-color: #0E2431;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    padding: 1rem 0;
+  }
+  .footer__title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .footer__social{
+    margin-bottom: 1.25rem;
+  }
+  .footer__icon{
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 1rem
+  }
+  
+  .footer__admin{
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    
+  }
+  .footer__admin a{
+    font-size: 1.25rem;
+    margin: 0 1rem; 
+  }
+  
