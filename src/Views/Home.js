@@ -24,7 +24,7 @@ class Home extends React.Component{
                 <li class="nav-item">
                     <a href="#" class="nav-link">SIGN IN</a>
                 </li>
-                <hr/>
+                {/* <hr/> */}
                 <li class="nav-item">
                 <a href="#" class="nav-link">SIGN UP </a>
                 </li>
@@ -96,7 +96,7 @@ class Home extends React.Component{
                 <div class="row justify-content-center">
                     <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
                         <h2>ROMANTIC SONG</h2>
-                        <img src="../public/img/romantic ic.png" alt="" class="d-none d-xs-inline d-lg-inline "/>
+                        <img src="homepage/public/img/romantic ic.png" alt="" class="d-none d-xs-inline d-lg-inline "/>
                         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
                             beatae, maiores deserunt
                             in voluptatibus
@@ -138,7 +138,8 @@ class Home extends React.Component{
                 <div class="row justify-content-center">
                     <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
                         <h2>ROCK MUSIC</h2>
-                        <img src="homepage/public/img/rockmusic.png" alt="" class="d-none d-lg-inline"/>
+                        {/* d-sm-block */}
+                        <img src="homepage/public/img/rockmusic.png" alt="" class="d-none  d-lg-inline"/>
                         <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
                             beatae, maiores
                             deserunt
