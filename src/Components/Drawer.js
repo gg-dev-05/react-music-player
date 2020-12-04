@@ -1,12 +1,3 @@
-// import React from 'react'
-
-// export default function Drawer() {
-//     return (
-//         <div>
-//             DRAWER
-//         </div>
-//     )
-// }
 import React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
@@ -26,12 +17,22 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { withStyles } from "@material-ui/core/styles";
+import Button from '@material-ui/core/Button';
+import { Grid } from '@material-ui/core';
+import SimpleCard from './card';
 const drawerWidth = 180;
 const WhiteTextTypography = withStyles({
     root: {
-      color: "#11bbee"
-    }
-  })(Typography);
+    color: "#11bbee"
+  }
+})(Typography);
+const WhiteTextTypograph = withStyles({
+  root: {
+    color: "#000000"
+  }
+})(Typography);
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -80,7 +81,7 @@ function ResponsiveDrawer(props) {
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        {['Playlists', 'Liked Songs', 'Contact', 'User ID'].map((text, index) => (
+        {['Search', 'Playlists', 'Liked Songs', 'Contact', 'User ID'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
@@ -88,6 +89,14 @@ function ResponsiveDrawer(props) {
         ))}
       </List>
       <Divider />
+      <List>
+        {['Playlist1', 'Playlist2', 'Playlist3', 'Playlist4'].map((text, index) => (
+          <ListItem button key={text}>
+            {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
     </div>
   );
 
@@ -111,7 +120,7 @@ function ResponsiveDrawer(props) {
            {/* <Typography variant="h4" color="black" noWrap>
             Web Player  
           </Typography> */}
-          <WhiteTextTypography variant="h3">
+          <WhiteTextTypography variant="h4">
           Web Player 
       </WhiteTextTypography>
         </Toolbar>
@@ -150,28 +159,164 @@ function ResponsiveDrawer(props) {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-          facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-          gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-          donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-          adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-          Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-          imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-          arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-          donec massa sapien faucibus et molestie ac.
+        <WhiteTextTypograph variant="h5">
+          Top Picks
+          <Button  size="small"  style={{float: 'right'}}>
+            View all
+            </Button>
+          
+          <Grid container>
+          <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                </Grid>
+        </WhiteTextTypograph>
         </Typography>
+
         <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-          facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-          tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-          consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-          vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in. In
-          hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem et
-          tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique sollicitudin
-          nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra maecenas
-          accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam ultrices sagittis orci a.
+        <WhiteTextTypograph variant="h5">
+        Trending Songs
+        <Button  size="small"  style={{float: 'right'}}>
+            View all
+            </Button>
+          <Grid container>
+          <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                </Grid>
+      </WhiteTextTypograph>
         </Typography>
+
+        <Typography paragraph>
+        <WhiteTextTypograph variant="h5">
+        Recommended
+        <Button  size="small"  style={{float: 'right'}}>
+            View all
+            </Button>
+          <Grid container>
+          <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                </Grid>
+      </WhiteTextTypograph>
+        </Typography>
+      
+        <Typography paragraph>
+        <WhiteTextTypograph variant="h5">
+         Hindi Songs
+         <Button  size="small"  style={{float: 'right'}}>
+            View all
+            </Button>
+          <Grid container>
+          <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   
+                </Grid>
+      </WhiteTextTypograph>
+        </Typography>
+
+        <Typography paragraph>
+        <WhiteTextTypograph variant="h5">
+        Star Gallery
+        <Button  size="small"  style={{float: 'right'}}>
+            View all
+            </Button>
+          <Grid container>
+          <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                </Grid>
+      </WhiteTextTypograph>
+        </Typography>
+
+        <Typography paragraph>
+        <WhiteTextTypograph variant="h5">
+        English Songs
+        <Button  size="small"  style={{float: 'right'}}>
+            View all
+            </Button>
+          <Grid container>
+          <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                   <Grid sm="1"></Grid>
+                   <Grid sm="2" ListItem>
+                   <SimpleCard />
+                   </Grid>
+                </Grid>
+
+      </WhiteTextTypograph>
+        </Typography>
+        
       </main>
     </div>
   );

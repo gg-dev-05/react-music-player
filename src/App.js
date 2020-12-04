@@ -1,9 +1,10 @@
 import './App.css';
-import Home from './Views/Home'
+// import Home from './Views/Home'
 import Player from './Views/Player'
 import Login from './Views/Login'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import ResponsiveDrawer from './Components/Drawer';
+import Home from './Views/Home';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
 
         <Switch>
           <Route exact path="/">
-            <Home />
+          <Home />
             
           </Route>
 
