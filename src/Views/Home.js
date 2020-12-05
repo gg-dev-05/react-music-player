@@ -1,8 +1,105 @@
 import React from 'react'
-
+import { Button } from "@material-ui/core"
+import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { green, purple } from '@material-ui/core/colors';
+const BootstrapButton = withStyles({
+    root: {
+      boxShadow: 'none',
+      textTransform: 'none',
+      fontSize: 16,
+      padding: '6px 12px',
+      border: '1px solid',
+      lineHeight: 1.5,
+      backgroundColor: '#0063cc',
+      borderColor: '#0063cc',
+      fontFamily: [
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(','),
+      '&:hover': {
+        backgroundColor: '#0069d9',
+        borderColor: '#0062cc',
+        boxShadow: 'none',
+      },
+      '&:active': {
+        boxShadow: 'none',
+        backgroundColor: '#0062cc',
+        borderColor: '#005cbf',
+      },
+      '&:focus': {
+        boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+      },
+    },
+  })(Button);
+  
+  const ColorButton = withStyles((theme) => ({
+    root: {
+      color: theme.palette.getContrastText(purple[500]),
+      backgroundColor: purple[500],
+      '&:hover': {
+        backgroundColor: purple[700],
+      },
+    },
+  }))(Button);
+  
+  const useStyles = makeStyles((theme) => ({
+    margin: {
+      margin: theme.spacing(1),
+    },
+  }));
+  
+  const theme = createMuiTheme({
+    palette: {
+      primary: green,
+    },
+  });
+  function B1() {
+    const classes = useStyles();
+  
+    return (
+      <div>
+        <ColorButton href="/login" variant="contained" color="primary" className={classes.margin}>
+          Launch The Web Player
+        </ColorButton>
+      </div>
+    );
+  }
+  function B2() {
+    const classes = useStyles();
+  
+    return (
+      <div>
+        <BootstrapButton href="/login" variant="contained" color="primary" disableRipple className={classes.margin}>
+          GET READY FOR THE SONG
+        </BootstrapButton> 
+      </div>
+    );
+  }
+  function B3() {
+    const classes = useStyles();
+  
+    return (
+      <div>
+        <ThemeProvider theme={theme}>
+          <Button href="/login" variant="contained" color="primary" className={classes.margin}>
+            Listen to your Favorite Artist
+          </Button>
+        </ThemeProvider>
+      </div>
+    );
+  }
 class Home extends React.Component {
     render() {
         return (
+            
             <div>
                 <nav id="mainNavbar" class="navbar navbar-dark  navbar-expand-lg py-0 fixed-top text-primary" >
                     <a href="#top" class="navbar-brand"><img src="homepage/img/apna player.png" width="50px" alt="" /></a>
@@ -15,17 +112,17 @@ class Home extends React.Component {
                                 <a href="/home" class="nav-link" ><i class="fas fa-home mx-2" > </i>HOME </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/" class="nav-link"><i class="fa fa-group mx-2"> </i>ABOUT</a>
-                            </li>
+                                <a href="#footer" class="nav-link"><i class="fa fa-group mx-2"> </i>ABOUT</a>
+
                         </ul>
                         <ul class="navbar-nav d-flex ">
                             <li class="nav-item">
                                 <a href="/login" class="nav-link">SIGN IN</a>
                             </li>
                             {/* <hr/> */}
-                            <li class="nav-item">
+                            {/* <li class="nav-item">
                                 <a href="/login" class="nav-link">SIGN UP </a>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </nav>
@@ -96,14 +193,10 @@ class Home extends React.Component {
                                 <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
                                     <h2>ROMANTIC SONG</h2>
                                     <img src="homepage/img/romantic ic.png" alt="" class="d-none d-xs-inline d-lg-inline " />
-                                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
-                                    beatae, maiores deserunt
-                                    in voluptatibus
-                                    aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur
-                                    repellat eveniet quidem
-                                    voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam
-                                    autem nam ex deserunt debitis
-                            eaque ratione! Nobis, quidem assumenda.</p>
+                                    <p class="lead">
+                                    It will give you feelings and emotions to aspire to, and songs are there for us when we go through difficult times.
+                            </p>
+                            <B1/>
                                 </div>
                             </div>
                         </div>
@@ -114,14 +207,10 @@ class Home extends React.Component {
                                 <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
                                     <h2>RETRO SONG</h2>
                                     <img src="homepage/img/retro ic.png" alt="" class="d-none d-lg-inline" />
-                                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
-                                    beatae, maiores deserunt
-                                    in voluptatibus
-                                    aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur
-                                    repellat eveniet quidem
-                                    voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam
-                                    autem nam ex deserunt debitis
-                            eaque ratione! Nobis, quidem assumenda.</p>
+                                    <p class="lead">
+                                    Music has the potential to change a mood, to shift an atmosphere, and to encourage a different behavior.
+                                    Enjoy the unlimited music.</p>
+                                    <B2/>
                                 </div>
                             </div>
                         </div>
@@ -139,26 +228,20 @@ class Home extends React.Component {
                                     <h2>ROCK MUSIC</h2>
                                     {/* d-sm-block */}
                                     <img src="homepage/img/rockmusic.png" alt="" class="d-none  d-lg-inline" />
-                                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
-                                    beatae, maiores
-                                    deserunt
-                                    in voluptatibus
-                                    aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur
-                                    repellat eveniet
-                                    quidem
-                                    voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam
-                                    autem nam ex deserunt
-                                    debitis
-                            eaque ratione! Nobis, quidem assumenda.</p>
+                                    <p class="lead">
+                                    Instrumentation includes – male vocals, backing vocals, electric guitars, double bass, drums, piano, harmonica, saxophone and other brass.
+                            <B3/>
+                            </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <footer class="footer ">
+               <section id="footer">
+               <footer class="footer">
                     <p class="footer__title"> <img src="homepage/img/music ic.png" class="img-fluid" width="50" height="50" alt="" />
-            Apna-Player</p>
+                    Apna-Player</p>
 
                     <div class="footer__admin">
                         <a href="/">contact</a>
@@ -170,6 +253,7 @@ class Home extends React.Component {
                     </div>
                     <p>&#169; 2020 copyright all right reserved</p>
                 </footer>
+               </section>
 
                 {/*    
 

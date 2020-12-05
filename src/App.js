@@ -1,9 +1,10 @@
 import './App.css';
-import Login from './Views/Login'
+// import Home from './Views/Home'
+import Player from './Views/Player'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import ResponsiveDrawer from './Components/Drawer';
 import Home from './Views/Home';
-import Search from './Components/Search'
+import Logs from './Views/Login';
 
 
 function App() {
@@ -19,11 +20,7 @@ function App() {
           </Route>
 
           <Route exact path="/login">
-            <Login />
-          </Route>
-
-          <Route exact path="/search">
-            <Search />
+            <Logs />
           </Route>
 
           <Route exact path="/app">
