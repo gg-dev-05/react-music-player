@@ -1,10 +1,10 @@
 import './App.css';
 // import Home from './Views/Home'
-import Player from './Views/Player'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import ResponsiveDrawer from './Components/Drawer';
 import Home from './Views/Home';
 import Logs from './Views/Login';
+import Search from './Components/Search'
 
 
 function App() {
@@ -16,6 +16,11 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+
+          </Route>
+
+          <Route exact path="/search">
+            <Search />
 
           </Route>
 
