@@ -10,18 +10,17 @@ import Logs from './Views/Login';
 function App() {
   return (
     <div>
-      
+
       <Router>
 
         <Switch>
           <Route exact path="/">
-          <Home />
-            
+            <Home />
+
           </Route>
 
           <Route exact path="/login">
             <Logs />
-            
           </Route>
 
           <Route exact path="/app">

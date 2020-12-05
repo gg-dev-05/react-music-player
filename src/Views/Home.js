@@ -1,5 +1,3 @@
-import { render } from "@testing-library/react"
-import { Component } from "react"
 import React from 'react'
 import { Button } from "@material-ui/core"
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
@@ -104,18 +102,18 @@ class Home extends React.Component {
             
             <div>
                 <nav id="mainNavbar" class="navbar navbar-dark  navbar-expand-lg py-0 fixed-top text-primary" >
-                    <a href="#" class="navbar-brand"><img src="homepage/img/apna player.png" width="50px" alt="" /></a>
+                    <a href="#top" class="navbar-brand"><img src="homepage/img/apna player.png" width="50px" alt="" /></a>
                     <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon " ></span>
                     </button>
                     <div class="collapse navbar-collapse " id="navLinks">
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li class="nav-item">
-                                <a href="" class="nav-link" ><i class="fas fa-home mx-2" > </i>HOME </a>
+                                <a href="/home" class="nav-link" ><i class="fas fa-home mx-2" > </i>HOME </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#footer" class="nav-link"><i class="fa fa-group mx-2"> </i>ABOUT</a>
-                            </li>
+
                         </ul>
                         <ul class="navbar-nav d-flex ">
                             <li class="nav-item">
@@ -155,14 +153,15 @@ class Home extends React.Component {
                             </div>
 
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        {/* Removing to remove warnings */}
+                        {/* <a class="carousel-control-prev" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <a class="carousel-control-next" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
-                        </a>
+                        </a> */}
                     </div>
                 </section>
 
@@ -245,12 +244,12 @@ class Home extends React.Component {
                     Apna-Player</p>
 
                     <div class="footer__admin">
-                        <a href="#">contact</a>
+                        <a href="/">contact</a>
                     </div>
                     <div class="footer__social">
-                        <a href="#" target="_blank" class="footer__icon"><i class='fab fa-instagram-square'></i></a>
-                        <a href="#" target="_blank" class="footer__icon"><i class='fa fa-envelope-square'></i></a>
-                        <a href="#" target="_blank" class="footer__icon"><i class='fa fa-phone'></i></a>
+                        <a href="/" target="_blank" class="footer__icon"><i class='fab fa-instagram-square'></i></a>
+                        <a href="/" target="_blank" class="footer__icon"><i class='fa fa-envelope-square'></i></a>
+                        <a href="/" target="_blank" class="footer__icon"><i class='fa fa-phone'></i></a>
                     </div>
                     <p>&#169; 2020 copyright all right reserved</p>
                 </footer>

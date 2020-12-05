@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 var axios = require("axios").default;
 
 const UserRoutes = require('./routes/User')
+require('dotenv').config()
 
 
 const app = express()
@@ -26,8 +27,8 @@ app.route("/search/:q").get((req, res) => {
         url: 'https://deezerdevs-deezer.p.rapidapi.com/search',
         params: { q: q },
         headers: {
-            'x-rapidapi-key': '6f2b548fefmsh949d73f0a90fb17p145b15jsn4eeaee9779ea',
-            'x-rapidapi-host': 'deezerdevs-deezer.p.rapidapi.com'
+            'x-rapidapi-key': process.env.x_rapidapi_key,
+            'x-rapidapi-host': process.env.x_rapidapi_host
         }
     };
 
