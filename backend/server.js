@@ -21,7 +21,6 @@ mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedT
 
 app.route("/search/:q").get((req, res) => {
     q = req.params.q
-
     var options = {
         method: 'GET',
         url: 'https://deezerdevs-deezer.p.rapidapi.com/search',
@@ -37,6 +36,7 @@ app.route("/search/:q").get((req, res) => {
     axios.request(options).then(function (response) {
 
         res.send(response.data.data[0].title)
+        console.log("Data sent back")
     }).catch(function (error) {
         console.error(error);
     });
@@ -46,6 +46,7 @@ app.use('/user', UserRoutes)
 const connection = mongoose.connection;
 connection.once('open', () => {
     console.log("MongoDB database connection successful")
+
 })
 
 app.listen(port, () => console.log(`Server running on port: ${port}`))
