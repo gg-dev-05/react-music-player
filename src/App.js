@@ -9,7 +9,7 @@ import Search from './Components/Search'
 
 function App() {
   return (
-    <div>
+    <div className="fill">
 
       <Router>
 

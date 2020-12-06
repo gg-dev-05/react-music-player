@@ -35,7 +35,7 @@ app.route("/search/:q").get((req, res) => {
 
     axios.request(options).then(function (response) {
 
-        res.send(response.data.data[0].title)
+        res.send(response.data)
         console.log("Data sent back")
     }).catch(function (error) {
         console.error(error);
