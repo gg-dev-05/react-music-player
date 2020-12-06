@@ -47,7 +47,6 @@ class Search extends React.Component {
 
     handleOnInputChange = (event) => {
         const query = event.target.value;
-        console.log(query)
         this.setState({ query, loading: true, message: '' });
         this.fetchSearchResults(query)
     };
@@ -71,7 +70,7 @@ class Search extends React.Component {
                             <a key={result.id} href={result.preview} className="col-md-6 border">
                                 <div className="container text-center m-2">
                                     <div className="image-wrapper">
-                                        <img className="image" src={result.album.cover_medium} alt={`${result.artist.name} image`} />
+                                        <img className="image" src={result.album.cover_medium} alt={`${result.artist.name}`} />
                                     </div>
                                     -By <h6>{result.artist.name}</h6>
                                 </div>
@@ -86,7 +85,7 @@ class Search extends React.Component {
         else {
             return (
                 <div>
-                    <h1>NOTHING TO SEE HERE</h1>
+                    {this.showLoading()}
                 </div>
             )
         }
@@ -102,9 +101,7 @@ class Search extends React.Component {
                         onChange={this.handleOnInputChange}
                     />
                 </div>
-                <div className="loading">
-                    {this.showLoading()}
-                </div>
+
                 {this.renderSearchResults()}
 
 
