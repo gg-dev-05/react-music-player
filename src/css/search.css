@@ -2,6 +2,10 @@
     position: relative;
 }
 
+.image {
+    background: transparent url('../loader.gif') center no-repeat;
+}
+
 input {
     font-size: 1.5em;
     transition: all .2s ease-out;

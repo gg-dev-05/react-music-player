@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/search.css'
 import axios from 'axios'
+import loader from '../loader.gif'
 
 class Search extends React.Component {
     constructor(props) {
@@ -30,7 +31,8 @@ class Search extends React.Component {
             .then((res) => {
                 console.log(res)
                 this.setState({
-                    results: res.data.data
+                    results: res.data.data,
+                    loading: false
                 })
             })
             .catch((err) => {
@@ -50,23 +52,41 @@ class Search extends React.Component {
         this.fetchSearchResults(query)
     };
 
+    showLoading = () => {
+        if (this.state.loading) {
+            return (
+                <img src={loader} alt="" />
+            )
+        }
+    }
     renderSearchResults = () => {
         const { results } = this.state;
+
 
         if (Object.keys(results).length && results.length) {
             return (
                 <div className="container row">
                     { results.map(result => {
                         return (
-                            <a key={result.id} href={result.preview} className="col-md-6">
-                                <h6 className="image-username">{result.artist.picture_medium}</h6>
-                                <div className="image-wrapper">
-                                    <img className="image" src={result.album.cover_small} alt={`${result.username} image`} />
+                            <a key={result.id} href={result.preview} className="col-md-6 border">
+                                <div className="container text-center m-2">
+                                    <div className="image-wrapper">
+                                        <img className="image" src={result.album.cover_medium} alt={`${result.artist.name} image`} />
+                                    </div>
+                                    -By <h6>{result.artist.name}</h6>
                                 </div>
                             </a>
                         )
                     })}
 
+                </div>
+            )
+        }
+
+        else {
+            return (
+                <div>
+                    <h1>NOTHING TO SEE HERE</h1>
                 </div>
             )
         }
@@ -81,6 +101,9 @@ class Search extends React.Component {
                         placeholder="Search..."
                         onChange={this.handleOnInputChange}
                     />
+                </div>
+                <div className="loading">
+                    {this.showLoading()}
                 </div>
                 {this.renderSearchResults()}
 
